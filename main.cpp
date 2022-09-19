@@ -15,7 +15,7 @@ int main(int argc, char* args[])
 
 	class Classroom cl(10); // create the population of students which will be trained
 
-	for(int generation = 0; generation < 10; generation++)
+	for(int generation = 0; generation < 1000; generation++)
 	{
 		cl.generation(); // evaluate fitnesses, pair, reproduce and mutate population
 		
