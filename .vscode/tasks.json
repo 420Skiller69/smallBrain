@@ -10,6 +10,7 @@
                 "${fileDirname}\\main.cpp",
                 "${fileDirname}\\Student.cpp",
                 "${fileDirname}\\Classroom.cpp",
+                "${fileDirname}\\SmallBrain.cpp",
                 "-o",
                 "${fileDirname}\\main.exe"
             ],

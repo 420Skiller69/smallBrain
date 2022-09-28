@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// kann neuron outputs zu einem hidden layer und dem gesamten output geben oder nicht ; genauso anderstherum...
 
 double Student::getFitness()
 {

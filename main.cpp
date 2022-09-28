@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <iterator>
-#include <random>
 #include <ctime>
+#include <random>
 
-#include "Classroom.h"
+#include "SmallBrain.h"
 
 using namespace std;
 
@@ -12,17 +12,20 @@ using namespace std;
 int main(int argc, char* args[])
 {
 	srand(time(NULL));
+	SmallBrain brian(2,2);
 
-	class Classroom cl(10); // create the population of students which will be trained
 
-	for(int generation = 0; generation < 1000; generation++)
-	{
-		cl.generation(); // evaluate fitnesses, pair, reproduce and mutate population
-		
-		cout << endl << generation << "--------------------------" << endl; 
-		cl.displayAll();	
-	}
+	for(int i = 0; i < 10; i++)
+		brian.addNeuron(1);
 
+	for(auto &layer: brian.layers)
+		for(auto &neuron: layer)
+			neuron.value = rand()%1000;
+
+	for(int i = 0; i < 10; i++)
+		brian.addSynapse(1);
+
+	
 
 	return 0;
 }
