@@ -6,7 +6,6 @@ using namespace std;
 
 class SmallBrain // uncouncious direct synapse trash
 {
-public: // faosjdvoöjanfboaebof FIKCFIXIFXIngaeojnboaeböoaenboöndgbisdgbianebosgboöjaoejgboönöojeanbos
     struct Neuron;
 
     struct Synapse
@@ -22,12 +21,13 @@ public: // faosjdvoöjanfboaebof FIKCFIXIFXIngaeojnboaeböoaenboöndgbisdgbianeb
         double value;
 
         Neuron() : synapss(0) {};
-        void fire();
     };
 
     vector<vector<Neuron>> layers;
 
-
+    void fireNeuron(Neuron &neuron);
+    
+public: 
     SmallBrain(int inputSize, int outputSize)
     : layers(2) 
     {
@@ -35,12 +35,10 @@ public: // faosjdvoöjanfboaebof FIKCFIXIFXIngaeojnboaeböoaenboöndgbisdgbianeb
         layers[1] = vector<Neuron>(outputSize);
     };
 
-    void fireNeuron(Neuron &neuron);
-    
+    vector<double> fire(vector<double> input);
     void addSynapse(double weightAbs);
     void addNeuron(double weightAbs);
+    void changeRandomSynapse(double value);
+    void changeRandomBias(double value);
 
-    // Neuron* getRandomNeuron();
-    // int getLayerInd(Neuron *pointr);
-    // int getNeuronInd(Neuron &pointr);
 };

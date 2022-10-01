@@ -29,7 +29,7 @@ void Classroom::generation()
 
 int Classroom::getRandomStudent()
 {
-    int ind = 0;
+    std::vector<Student>::size_type ind = 0;
 
     if(totalFitness == 0)
         return rand()%population.size();
